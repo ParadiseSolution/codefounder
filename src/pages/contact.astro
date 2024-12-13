@@ -1,0 +1,168 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+---
+
+<Layout title="CodeFounder - Contact Us">
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Header Section */}
+            <div class="text-center mb-12">
+                <h1
+                    class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600"
+                >
+                    Get in Touch
+                </h1>
+                <p class="text-muted-foreground max-w-2xl mx-auto">
+                    Ready to transform your digital presence? We're here to help
+                    bring your vision to life.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                {/* Contact Form */}
+                <div class="lg:col-span-2">
+                    <Card className="p-6 md:p-8 border-2">
+                        <form class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label
+                                        for="firstName"
+                                        class="text-sm font-medium"
+                                        >First name</label
+                                    >
+                                    <Input
+                                        id="firstName"
+                                        name="firstName"
+                                        required
+                                    />
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        for="lastName"
+                                        class="text-sm font-medium"
+                                        >Last name</label
+                                    >
+                                    <Input
+                                        id="lastName"
+                                        name="lastName"
+                                        required
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="email" class="text-sm font-medium"
+                                    >Email</label
+                                >
+                                <Input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                />
+                            </div>
+
+                            <div class="space-y-2">
+                                <label
+                                    for="projectType"
+                                    class="text-sm font-medium"
+                                    >Project Type</label
+                                >
+                                <select
+                                    id="projectType"
+                                    name="projectType"
+                                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    required
+                                >
+                                    <option value=""
+                                        >Select a project type</option
+                                    >
+                                    <option value="website"
+                                        >Website Development</option
+                                    >
+                                    <option value="ecommerce"
+                                        >E-commerce Solution</option
+                                    >
+                                    <option value="webapp"
+                                        >Web Application</option
+                                    >
+                                    <option value="consulting"
+                                        >Digital Consulting</option
+                                    >
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="message" class="text-sm font-medium"
+                                    >Project Details</label
+                                >
+                                <Textarea
+                                    id="message"
+                                    name="message"
+                                    rows={6}
+                                    placeholder="Tell us about your project, goals, and timeline..."
+                                    required
+                                />
+                            </div>
+
+                            <Button
+                                type="submit"
+                                className="w-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700"
+                            >
+                                Send Message
+                            </Button>
+                        </form>
+                    </Card>
+                </div>
+                {/* Contact Information Cards */}
+                <div class="space-y-4">
+                    <Card
+                        className="p-6 border-2 hover:border-orange-300 transition-colors"
+                    >
+                        <div class="flex items-start space-x-4">
+                            <Mail className="h-6 w-6 text-orange-600 mt-1" />
+                            <div>
+                                <h3 class="font-semibold mb-2">Email Us</h3>
+                                <p class="text-sm text-muted-foreground mb-2">
+                                    Our team typically responds within 2 hours
+                                </p>
+                                <a
+                                    href="mailto:contact@codefound.com"
+                                    class="text-sm text-orange-600 hover:text-orange-700"
+                                >
+                                    hello@codefounder.studio
+                                </a>
+                            </div>
+                        </div>
+                    </Card>
+
+                    <Card
+                        className="p-6 border-2 hover:border-orange-300 transition-colors"
+                    >
+                        <div class="flex items-start space-x-4">
+                            <Phone className="h-6 w-6 text-orange-600 mt-1" />
+                            <div>
+                                <h3 class="font-semibold mb-2">Call Us</h3>
+                                <p class="text-sm text-muted-foreground mb-2">
+                                    Mon-Fri from 9am to 6pm EST
+                                </p>
+                                <a
+                                    href="tel:+1234567890"
+                                    class="text-sm text-orange-600 hover:text-orange-700"
+                                >
+                                    +65 8691 8172
+                                </a>
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

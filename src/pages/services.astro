@@ -1,0 +1,145 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Code2, Rocket, LineChart, Wrench, Check, ArrowRight } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const services = [
+  {
+    icon: Code2,
+    title: "Web Development",
+    description: "Custom web solutions built with modern technologies and best practices.",
+    features: [
+      "Custom Website Development",
+      "E-commerce Solutions",
+      "Web Applications",
+      "Content Management Systems",
+      "API Integration & Development",
+      "Progressive Web Apps (PWA)"
+    ],
+    benefits: "Transform your digital presence with custom web solutions that perfectly align with your business goals. We use cutting-edge technologies and frameworks to deliver scalable, secure, and high-performing websites.",
+    cta: "Start Your Project"
+  },
+  {
+    icon: LineChart,
+    title: "Digital Strategy",
+    description: "Comprehensive SEO and marketing strategies to boost your online presence.",
+    features: [
+      "SEO Optimization",
+      "Content Strategy",
+      "Analytics & Reporting",
+      "Conversion Rate Optimization",
+      "User Experience Design",
+      "Market Research & Analysis"
+    ],
+    benefits: "Enhance your online visibility and reach your target audience effectively. Our data-driven strategies help you make informed decisions and achieve measurable results.",
+    cta: "Boost Your Presence"
+  },
+  {
+    icon: Rocket,
+    title: "Performance",
+    description: "Optimization for speed, accessibility, and user experience.",
+    features: [
+      "Speed Optimization",
+      "Core Web Vitals",
+      "Mobile Responsiveness",
+      "Accessibility Compliance",
+      "Performance Monitoring",
+      "Load Time Optimization"
+    ],
+    benefits: "Deliver exceptional user experiences with lightning-fast websites. We optimize every aspect of your digital presence to ensure optimal performance across all devices.",
+    cta: "Optimize Now"
+  },
+  {
+    icon: Wrench,
+    title: "Maintenance",
+    description: "Ongoing support and updates to keep your digital assets running smoothly.",
+    features: [
+      "Regular Updates & Patches",
+      "Security Monitoring",
+      "Backup Management",
+      "Technical Support",
+      "Performance Monitoring",
+      "Content Updates"
+    ],
+    benefits: "Keep your digital assets secure and up-to-date with our comprehensive maintenance services. We handle the technical details so you can focus on your business.",
+    cta: "Get Support"
+  }
+];
+---
+
+<Layout title="CodeFounder - Our Services">
+  <main class="pt-24 pb-16">
+    <section class="py-16 md:py-24 bg-gradient-to-b from-white to-orange-50/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600">
+            Our Services
+          </h1>
+          <p class="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+            Comprehensive digital solutions tailored to help your business thrive in the modern digital landscape.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
+          {services.map((service) => (
+            <Card 
+              key={service.title}
+              className="border-2 hover:border-orange-300 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group"
+            >
+              <CardHeader className="pb-4">
+                <div class="flex items-center gap-4">
+                  <div class="p-2 rounded-lg bg-orange-50 text-orange-600">
+                    <service.icon className="h-6 w-6 md:h-8 md:w-8" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl md:text-2xl">{service.title}</CardTitle>
+                    <CardDescription className="text-sm md:text-base mt-1">
+                      {service.description}
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+
+              <CardContent>
+                <div class="space-y-6">
+                  {/* Features List */}
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    {service.features.map((feature) => (
+                      <div 
+
+                        class="flex items-center gap-2 text-sm"
+                      >
+                        <Check className="h-4 w-4 text-orange-600 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Benefits */}
+                  <div class="bg-orange-50/50 p-4 rounded-lg">
+                    <p class="text-sm text-muted-foreground">
+                      {service.benefits}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div class="mt-12 md:mt-16 text-center">
+          <a 
+            href="/contact" 
+            class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 transition-colors text-lg font-semibold"
+          >
+            Discuss Your Project With Us
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
