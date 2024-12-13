@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'paradisesolution.github.io',
+  site: 'https://paradisesolution.github.io',
   integrations: [
     react(),
     tailwind({
