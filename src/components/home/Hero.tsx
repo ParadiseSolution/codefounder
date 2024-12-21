@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { cn, getBaseUrl } from "@/lib/utils"
 
 export function Hero() {
   return (
@@ -18,15 +18,17 @@ export function Hero() {
           <Button 
             size="lg" 
             className="w-full sm:w-auto rounded-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700"
+            asChild
           >
-            Our Services
+            <a href={getBaseUrl("services")}>Our Services</a>
           </Button>
           <Button 
             size="lg" 
             variant="outline" 
             className="w-full sm:w-auto rounded-full border-orange-600/20 hover:bg-orange-600/5"
+            asChild
           >
-            Get in Touch
+            <a href={getBaseUrl("contact")}>Get in Touch</a>
           </Button>
         </div>
       </div>

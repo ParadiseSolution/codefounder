@@ -1,18 +1,18 @@
 import { Code } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn, getBaseUrl } from "@/lib/utils"
 
 const footerLinks = {
   services: [
-    { label: "Web Development", href: "/services#web-development" },
-    { label: "Digital Strategy", href: "/services#digital-strategy" },
-    { label: "Performance", href: "/services#performance" },
-    { label: "Maintenance", href: "/services#maintenance" },
+    { label: "Web Development", href: getBaseUrl("services#web-development") },
+    { label: "Digital Strategy", href: getBaseUrl("services#digital-strategy") },
+    { label: "Performance", href: getBaseUrl("services#performance") },
+    { label: "Maintenance", href: getBaseUrl("services#maintenance") },
   ],
   company: [
-    { label: "About", href: "/about" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
+    { label: "About", href: getBaseUrl("about") },
+    { label: "Portfolio", href: getBaseUrl("portfolio") },
+    { label: "Privacy Policy", href: getBaseUrl("privacy") },
+    { label: "Terms of Service", href: getBaseUrl("terms") },
   ],
   social: [
     { label: "Twitter", href: "https://twitter.com" },
@@ -111,13 +111,13 @@ export function Footer() {
           </p>
           <div className="flex items-center space-x-4">
             <a 
-              href="/privacy"
+              href={getBaseUrl("privacy")}
               className="text-sm text-muted-foreground hover:text-orange-600 transition-colors duration-200"
             >
               Privacy
             </a>
             <a 
-              href="/terms"
+              href={getBaseUrl("terms")}
               className="text-sm text-muted-foreground hover:text-orange-600 transition-colors duration-200"
             >
               Terms

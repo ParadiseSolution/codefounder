@@ -1,7 +1,7 @@
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useActivePath } from "@/hooks/useActivePath"
-import { cn } from "@/lib/utils"
+import { cn, getBaseUrl } from "@/lib/utils"
 import {
   Sheet,
   SheetContent,
@@ -11,10 +11,10 @@ import {
 } from "@/components/ui/sheet"
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/contact", label: "Contact" },
+  { href: getBaseUrl(""), label: "Home" },
+  { href: getBaseUrl("services"), label: "Services" },
+  { href: getBaseUrl("portfolio"), label: "Portfolio" },
+  { href: getBaseUrl("contact"), label: "Contact" },
 ]
 
 export function MobileMenu() {
