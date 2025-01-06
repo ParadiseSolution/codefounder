@@ -15,7 +15,10 @@ export function NavigationLinks() {
   return (
     <div className="hidden md:flex items-center space-x-1">
       {links.map((link) => {
-        const isActive = currentPath === link.href
+        const normalizedCurrentPath = currentPath.replace(/\/$/, "") || "/"
+        const normalizedLinkPath = link.href.replace(/\/$/, "") || "/"
+        const isActive = normalizedCurrentPath === normalizedLinkPath
+
         return (
           <Button
             key={link.href}
