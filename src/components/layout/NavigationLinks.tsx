@@ -3,7 +3,7 @@ import { useActivePath } from "@/hooks/useActivePath"
 import { cn, getBaseUrl } from "@/lib/utils"
 
 const links = [
-  { href: getBaseUrl(""), label: "Home" },
+  { href: getBaseUrl("/"), label: "Home" },
   { href: getBaseUrl("services"), label: "Services" },
   { href: getBaseUrl("portfolio"), label: "Portfolio" },
   { href: getBaseUrl("contact"), label: "Contact" },
@@ -17,9 +17,9 @@ export function NavigationLinks() {
       {links.map((link) => {
         const isActive = currentPath === link.href
         return (
-          <Button 
-            key={link.href} 
-            variant="ghost" 
+          <Button
+            key={link.href}
+            variant="ghost"
             className={cn(
               "text-sm font-medium rounded-full px-4 relative group",
               "transition-colors duration-300 ease-in-out",

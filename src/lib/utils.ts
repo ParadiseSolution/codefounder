@@ -8,5 +8,5 @@ export function cn(...inputs: ClassValue[]) {
 export function getBaseUrl(path: string) {
   // Remove leading slash if present
   const cleanPath = path.startsWith('/') ? path.slice(1) : path
-  return `/codefounder/${cleanPath}`
+  return `${import.meta.env.BASE_URL}/${cleanPath}`
 }

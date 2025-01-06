@@ -29,8 +29,8 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand Column */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Code className="h-6 w-6 text-orange-600" />
+              <div className="flex items-center space-x-2">
+                <img src={getBaseUrl("/codefounder.png")} alt="CodeFounder" className="h-6 w-6" />
                 <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600">
                   CodeFounder
                 </span>
@@ -46,7 +46,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.href}>
-                    <a 
+                    <a
                       href={link.href}
                       className={cn(
                         "text-sm text-muted-foreground hover:text-orange-600",
@@ -66,7 +66,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.href}>
-                    <a 
+                    <a
                       href={link.href}
                       className={cn(
                         "text-sm text-muted-foreground hover:text-orange-600",
@@ -86,7 +86,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.social.map((link) => (
                   <li key={link.href}>
-                    <a 
+                    <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -110,13 +110,13 @@ export function Footer() {
             © {new Date().getFullYear()} CodeFounder. All rights reserved.
           </p>
           <div className="flex items-center space-x-4">
-            <a 
+            <a
               href={getBaseUrl("privacy")}
               className="text-sm text-muted-foreground hover:text-orange-600 transition-colors duration-200"
             >
               Privacy
             </a>
-            <a 
+            <a
               href={getBaseUrl("terms")}
               className="text-sm text-muted-foreground hover:text-orange-600 transition-colors duration-200"
             >

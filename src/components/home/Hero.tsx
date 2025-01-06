@@ -12,19 +12,19 @@ export function Hero() {
           CodeFounder
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Building exceptional digital experiences through strategic development and optimization.
+          Let us bring your dreams to life. Build and deploy your MVP with us in days.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="w-full sm:w-auto rounded-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700"
             asChild
           >
             <a href={getBaseUrl("services")}>Our Services</a>
           </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
+          <Button
+            size="lg"
+            variant="outline"
             className="w-full sm:w-auto rounded-full border-orange-600/20 hover:bg-orange-600/5"
             asChild
           >
