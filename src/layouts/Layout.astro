@@ -8,11 +8,13 @@ import "@fontsource/space-mono";
 import "@/styles/globals.css";
 import { getBaseUrl } from "@/lib/utils";
 import NavigationHeader from "@/components/layout/NavigationHeader";
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
+		<ClientRouter />
 		<meta charset="UTF-8" />
 		<base href={import.meta.env.BASE_URL} />
 		<meta name="description" content="Astro description" />
