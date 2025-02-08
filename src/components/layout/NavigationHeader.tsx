@@ -1,12 +1,11 @@
-import { Code } from "lucide-react"
 import { NavigationLinks } from "./NavigationLinks"
 import { MobileMenu } from "./MobileMenu"
 import { getBaseUrl } from "@/lib/utils"
 
-export function Navigation() {
+export default function NavigationHeader() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
-      <nav className="max-w-7xl mx-auto bg-white/70 backdrop-blur-lg shadow-lg rounded-full border border-white/20">
+      <nav className="max-w-7xl mx-auto bg-white/70 backdrop-blur-sm shadow-lg rounded-2xl bg-opacity-80 border border-black">
         <div className="px-6 py-3">
           <div className="flex justify-between items-center">
             <a href={getBaseUrl("/")}>
@@ -18,6 +17,7 @@ export function Navigation() {
               </div>
             </a>
             <NavigationLinks />
+            
             <MobileMenu />
           </div>
         </div>
