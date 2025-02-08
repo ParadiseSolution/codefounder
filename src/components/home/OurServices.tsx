@@ -1,12 +1,11 @@
 import { Code2, Rocket, LineChart, Wrench } from "lucide-react"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
 
 const services = [
   {
     icon: Code2,
     title: "Web Development",
-    description: "Custom web solutions built with modern technologies and best practices."
+    description: "Custom web solutiosssns built with modern technologies and best practices."
   },
   {
     icon: LineChart,
@@ -25,7 +24,7 @@ const services = [
   }
 ]
 
-export function Services() {
+export function OurServices() {
   return (
     <section className="py-16 md:py-24 bg-white/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

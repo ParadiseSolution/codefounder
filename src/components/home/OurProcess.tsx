@@ -4,33 +4,33 @@ import { cn } from "@/lib/utils"
 const steps = [
   {
     icon: Lightbulb,
-    title: "Discovery",
-    description: "Understanding your goals, target audience, and project requirements through in-depth consultation."
+    title: "Week 1: Strategy & Design",
+    description: "Deep-dive workshops to define your MVP scope and create user-focused designs that investors will love."
   },
   {
     icon: Palette,
-    title: "Design",
-    description: "Creating wireframes and visual designs that align with your brand and user experience objectives."
+    title: "Week 2: Prototype & Validate",
+    description: "Transform designs into interactive prototypes. Get early feedback to validate your concept."
   },
   {
     icon: Code2,
-    title: "Development",
-    description: "Building your website with clean, efficient code and modern technologies for optimal performance."
+    title: "Week 3: MVP Development",
+    description: "Rapid development using proven tech stack. Build core features that demonstrate your value proposition."
   },
   {
     icon: Settings,
-    title: "Testing",
-    description: "Rigorous quality assurance across devices and browsers to ensure flawless functionality."
+    title: "Week 4: Test & Optimize",
+    description: "Thorough testing across all features. Optimize for performance and user experience."
   },
   {
     icon: Rocket,
-    title: "Launch",
-    description: "Deploying your website with careful attention to security and performance optimization."
+    title: "Week 4: Market Launch",
+    description: "Deploy your MVP with analytics. Start gathering real user insights for your investor pitch."
   },
   {
     icon: Users,
-    title: "Support",
-    description: "Providing ongoing maintenance and updates to keep your website running smoothly."
+    title: "Post-Launch Support",
+    description: "Ongoing refinements based on user feedback. Regular updates to enhance product-market fit."
   }
 ]
 
@@ -40,10 +40,10 @@ export function OurProcess() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600">
-            Our Process
+            30-Day MVP Journey
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-            A systematic approach to bringing your digital vision to life.
+            From concept to launch-ready MVP in just one month
           </p>
         </div>
         

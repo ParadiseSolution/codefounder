@@ -18,33 +18,36 @@ export function CallToAction() {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Ready to Transform Your Digital Presence?
+                Launch Your Startup in 30 Days
               </h2>
               <p className="text-orange-50 text-sm md:text-base mb-6">
-                Let's collaborate to create something extraordinary. Our expert team is ready to bring your vision to life.
+                Partner with experienced developers who are committed to bringing your vision to life. We focus on one project at a time to ensure quality delivery.
               </p>
               
               {/* Availability Indicator */}
-              <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-orange-50 w-fit mb-8">
+              <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-orange-50 w-fit mb-4">
                 <Calendar className="h-4 w-4" />
-                <span className="text-sm">3 Project Slots Available</span>
+                <span className="text-sm">Only 1 Project Slot Available</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 text-orange-50 w-fit mb-8">
+                <span className="text-sm font-semibold">🔥 Next Project Starts July 1st</span>
               </div>
               
               <Button 
                 size="lg" 
-                className="bg-white text-orange-600 hover:bg-orange-50 rounded-full w-full sm:w-auto"
+                className="bg-white text-orange-600 hover:bg-orange-50 rounded-full w-full sm:w-auto font-semibold"
               >
-                Schedule Consultation
+                Schedule Your Free Consultation →
               </Button>
             </div>
             
-            {/* Stats/Trust Indicators */}
+            {/* Value Propositions */}
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: "50+", label: "Projects Completed" },
-                { value: "98%", label: "Client Satisfaction" },
-                { value: "24/7", label: "Support Available" },
-                { value: "5★", label: "Average Rating" }
+                { value: "30 Days", label: "MVP Development Time" },
+                { value: "100%", label: "Dedicated Focus" },
+                { value: "24/7", label: "Developer Access" },
+                { value: "Free", label: "Initial Consultation" }
               ].map((stat) => (
                 <div 
                   key={stat.label} 
@@ -64,4 +67,4 @@ export function CallToAction() {
       </div>
     </section>
   )
-} 
+}
